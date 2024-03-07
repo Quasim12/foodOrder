@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="food.css">
+    <title>Food Order</title>
+</head>
+<body>
+    <div class="main">
+        <form>
+            <h1 style="color: red;">Food Order</h1>
+            &nbsp;
+            <div class="register">
+                <label class="required">Enter Your Name</label>
+                <br>
+                <input type="text" name="Full Name"id="name" oninput="NameValidate()" required>
+                <p id="message"></p>
+                <label class="required">Address</label>
+                <br>
+                <input type="text" name="Address" id="address" oninput="addressValidate()" required>
+                <p id="add"></p>
+                <label class="required">Mobile No</label>
+                <br>
+                <input type="text" name="Mobile"id="Mobile" oninput="mobileValidate()" reequired> 
+                <p id="mess"></p>
+                <label class="required">Email</label>
+                <br>
+                <input type="text" name="Email" id="email" oninput="emailvalidate()" required>
+                <p id="mail"></p>
+                <label >Food Item</label>
+                <!-- <input type="text" name="Food Item"required> -->
+               <br>
+               <div id="foodItems">
+                <div>
+                  <label for="food1">Food Item 1:</label>
+                  <input type="text" id="food1" name="foodItem[]" placeholder="Enter food item">
+                  <input type="number" id="quantity1" name="quantity[]" placeholder="Quantity" min="1">
+                  <button type="button" onclick="removeFoodItem()">Delete</button>
+                </div>
+              </div>
+              <button type="button" onclick="addFoodItem()">Add More</button>
+              <br><br>
+               <!-- <label >Quantity</label>
+                <br>
+                <input type="text" id="quantity" name="quantity" value="0" readonly>
+               <button type="button" onclick="incrementQuantity()">+</button>
+                 <br><br><br> -->
+               <label >Captcha</label><br>
+                <input type="text"id="Captcha" name="Captcha"readonly><br>
+                <input type="text"id="Captchainput" name="Captcha"required>
+               <br>
+               <h4>Captcha not vissible <img src="captchaimage.png" onclick="cap()"></h4> 
+
+               <button onclick="formSubmittedSuccessfully()" class="submit">Submit</button>
+        </form>
+    </div>
+    <script src="food.js"></script>
+</body>
+</html>
